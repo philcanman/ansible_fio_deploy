@@ -1,0 +1,23 @@
+---
+- hosts: demo
+  gather_facts: false
+
+  vars:
+    # Define FIO testing criteria.
+    fio_testname: FIO-Demo
+    fio_io_pattern: readwrite
+    fio_drives_undertest: /dev/sdb:/dev/sdc:/dev/sdd:/dev/sde:/dev/sdf:/dev/sdg:/dev/sdh:/dev/sdi
+    fio_size: 50% # fio will use % of the full size of the given files or devices.
+    fio_iodepth: 1 # Number of I/O units to keep in flight against the file/device.
+    fio_numjobs: 128
+    fio_runtime: 10000 # In seconds
+    fio_read_percentage: 80
+    fio_write_percentage: 20
+    fio_blocksize_read: 4k/50:8k/50
+    fio_blocksize_write: 4k/90:8k/10
+
+  tasks:
+    - name: Run FIO
+      include_role:
+        name: fio
+        tasks_from: main

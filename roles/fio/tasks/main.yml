@@ -1,0 +1,5 @@
+---
+- include_tasks: basic-req.yml
+- include_tasks: fio-prep.yml
+- include_tasks: kill-fio.yml
+- include_tasks: run-fio.yml

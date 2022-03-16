@@ -1,0 +1,30 @@
+[global]
+name=FIO-Demo-Run
+# Run the benchmark on the 8 testing VMDKs.
+filename={{fio_drives_undertest}}
+
+# Sequential mixed reads and writes.
+rw={{fio_io_pattern}}
+
+# Define a percentage split for read/writes
+rwmixread={{fio_read_percentage}}
+rwmixwrite={{fio_write_percentage}}
+
+# bssplit=blocksize/percentage:blocksize/percentage
+# left side of comma defines read
+# right side of comma defines writes
+bssplit={{fio_blocksize_read}},{{fio_blocksize_write}}
+
+thinktime=500
+direct=1
+
+# Number of clones of FIO
+numjobs={{fio_numjobs}}
+time_based
+runtime={{fio_runtime}}
+group_reporting
+
+[{{fio_testname}}]
+size={{fio_size}}
+ioengine=libaio
+iodepth={{fio_iodepth}}

@@ -1,0 +1,12 @@
+---
+
+- name: Download and unzip the repo files
+  ansible.builtin.unarchive:
+    src: "{{ gitrepo }}"
+    dest: "{{ fio_dir }}"
+    remote_src: yes
+
+- name: Copy FIO benchmark configuration file.
+  ansible.builtin.template:
+    src: config.fio.j2
+    dest: "{{ fio_dir }}/{{ fio_config_file }}"

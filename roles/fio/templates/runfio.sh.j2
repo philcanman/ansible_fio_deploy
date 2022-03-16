@@ -1,0 +1,1 @@
+fio {{ fio_dir }}/{{ fio_config_file }}  --status-interval=1 --minimal | {{ fio_dir }}/{{ repo_name }}/fio_to_influxdb.py -ip {{ influxdb_host }}

@@ -1,0 +1,9 @@
+---
+- name: Write out script to run FIO
+  ansible.builtin.template:
+    src: runfio.sh.j2
+    dest: "{{ fio_dir }}/run-fio.sh"
+    mode: '0777'
+
+- name: Run FIO
+  shell: "screen -d -m {{ fio_dir }}/run-fio.sh"

@@ -1,0 +1,12 @@
+- name: install needed packages
+  package: 
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - fio
+    - python3
+    - screen
+    - unzip
+
+- name: Install influx python package
+  shell: python3 -m pip install influxdb

@@ -1,0 +1,7 @@
+---
+- hosts: demo
+  gather_facts: false
+
+  tasks:
+  - name: Kill running processes
+    shell: "pkill fio"

@@ -1,0 +1,8 @@
+---
+- name: Kill FIO running processes if present.
+  shell: "pkill fio"
+  ignore_errors: true
+
+
+
+

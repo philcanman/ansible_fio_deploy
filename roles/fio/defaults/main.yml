@@ -1,0 +1,6 @@
+---
+fio_config_file: fio_config.fio
+fio_dir: /root
+gitrepo: https://github.com/philcanman/fio-to-influxdb/archive/refs/heads/main.zip
+repo_name: fio-to-influxdb-main
+influxdb_host: 10.255.188.238
