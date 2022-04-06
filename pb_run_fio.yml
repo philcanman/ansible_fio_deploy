@@ -15,6 +15,7 @@
     fio_write_percentage: 20
     fio_blocksize_read: 4k/50:8k/50
     fio_blocksize_write: 4k/90:8k/10
+    iorate: 1000
 
   tasks:
     - name: Run FIO
