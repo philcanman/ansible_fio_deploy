@@ -1,0 +1,17 @@
+out/vminfo_out.json
+tmp/*
+.terraform
+.vscode
+.ova
+scripts/test.py
+scripts/test1.py
+output.txt
+scripts/__pycache__
+Examples.txt
+WinRM_Test.yml
+venv
+Phil_Convert_to_OVA.yml
+test.yml
+ansible.cfg
+PasswordMaster.txt
+.ansible-lint
